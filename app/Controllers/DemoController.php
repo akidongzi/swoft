@@ -21,6 +21,7 @@ use Swoft\View\Bean\Annotation\View;
 use Swoft\Core\Application;
 use Swoft\Http\Message\Server\Request;
 use Swoft\Task\Event\TaskEvent;
+use Swoft\Task\Task;
 
 /**
  * 控制器demo
@@ -67,6 +68,9 @@ class DemoController
      */
     public function index(Request $request)
     {
+        $result  = Task::deliver('sync', 'cronTask', ['p1', 'p2'], Task::TYPE_CO);
+
+        print_r($result);
         \Swoft::trigger(TaskEvent::FINISH_TASK, null, 11, 22);
         // 获取所有GET参数
         $get = $request->query();

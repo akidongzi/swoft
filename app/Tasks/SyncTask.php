@@ -41,6 +41,19 @@ class SyncTask
     private $logic;
 
     /**
+     * crontab定时任务
+     * 每一秒执行一次
+     *
+     * @Scheduled(cron="* * * * * *")
+     */
+    public function cronTask(string $p1, string $p2)
+    {
+        echo time() . "每一秒执行一次  \n";
+        return 'cron';
+    }
+
+
+    /**
      * Deliver co task
      *
      * @param string $p1
