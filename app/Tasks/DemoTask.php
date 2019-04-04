@@ -32,7 +32,7 @@ class DemoTask
      * crontab定时任务
      * 每一秒执行一次
      *
-     * @Scheduled(cron="*\/5 * * * * *")
+     * @Scheduled(cron="*/5 * * * * *")
      */
     public function cronTask()
     {
