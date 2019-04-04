@@ -27,4 +27,10 @@ return [
     'service'      => require __DIR__ . DS . 'service.php',
     'breaker'      => require __DIR__ . DS . 'breaker.php',
     'provider'     => require __DIR__ . DS . 'provider.php',
+    'auth' => [
+        'jwt' => [
+            'algorithm' => 'HS256',
+            'secret' => '1231231'
+        ],
+    ],
 ];

@@ -20,6 +20,7 @@ use Swoft\Http\Server\Bean\Annotation\RequestMethod;
 use Swoft\View\Bean\Annotation\View;
 use Swoft\Core\Application;
 use Swoft\Http\Message\Server\Request;
+use Swoft\Task\Event\TaskEvent;
 
 /**
  * 控制器demo
@@ -66,6 +67,7 @@ class DemoController
      */
     public function index(Request $request)
     {
+        \Swoft::trigger(TaskEvent::FINISH_TASK, null, 11, 22);
         // 获取所有GET参数
         $get = $request->query();
         // 获取name参数默认值defaultName
