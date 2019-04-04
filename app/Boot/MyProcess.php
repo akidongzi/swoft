@@ -20,7 +20,7 @@ use Swoft\Task\Task;
 /**
  * Custom process
  *
- * @Process(name="customProcess", coroutine=true , num=2, boot=true)
+ * @Process(name="customProcess", coroutine=true , num=1, boot=true)
  */
 class MyProcess implements ProcessInterface
 {
@@ -31,10 +31,6 @@ class MyProcess implements ProcessInterface
         $process->name($processName);
 
         echo "Custom boot process \n";
-        while(1){
-            App::error("this errro log");
-            sleep(5);
-        }
 
 
         $result  = Task::deliverByProcess('sync', 'deliverCo', ['p', 'p2']);
