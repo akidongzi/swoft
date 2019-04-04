@@ -36,7 +36,7 @@ class MyProcess implements ProcessInterface
         $result  = Task::deliverByProcess('sync', 'deliverCo', ['p', 'p2']);
         var_dump($result);
 
-        ProcessBuilder::create('customProcess')->start();
+//        ProcessBuilder::create('customProcess')->start();
     }
 
     public function check(): bool
