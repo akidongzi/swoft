@@ -44,7 +44,7 @@ class SyncTask
      * crontab定时任务
      * 每一秒执行一次
      *
-     * @Scheduled(cron="* * * * * *")
+     * @Scheduled(cron="3-5 * * * * *")
      */
     public function cronTask(string $p1, string $p2)
     {
