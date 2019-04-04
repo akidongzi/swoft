@@ -16,6 +16,9 @@ return [
         'App\Commands',
         'App\Boot',
     ],
+    'beanScan'     => [
+        'App\Tasks',
+    ],
     'excludeScan'  => [
         'App\Helper',
     ],

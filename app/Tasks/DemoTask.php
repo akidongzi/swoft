@@ -21,6 +21,7 @@ use Swoft\Rpc\Client\Bean\Annotation\Reference;
 use Swoft\Task\Bean\Annotation\Scheduled;
 use Swoft\Task\Bean\Annotation\Task;
 
+
 /**
  * Demo task
  *
