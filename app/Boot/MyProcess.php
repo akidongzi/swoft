@@ -32,7 +32,7 @@ class MyProcess implements ProcessInterface
 
         echo "Custom boot process \n";
         while(1){
-            App::debug("this errro log");
+            App::error("this errro log");
             sleep(5);
         }
 
