@@ -8,7 +8,18 @@
  * @license https://github.com/swoft-cloud/swoft/blob/master/LICENSE
  */
 
+
 namespace App\Tasks;
+
+use App\Lib\DemoInterface;
+use App\Models\Entity\User;
+use Swoft\App;
+use Swoft\Bean\Annotation\Inject;
+use Swoft\HttpClient\Client;
+use Swoft\Redis\Redis;
+use Swoft\Rpc\Client\Bean\Annotation\Reference;
+use Swoft\Task\Bean\Annotation\Scheduled;
+use Swoft\Task\Bean\Annotation\Task;
 
 /**
  * Demo task
