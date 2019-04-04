@@ -35,7 +35,7 @@ class MyProcess implements ProcessInterface
 
         $result  = Task::deliverByProcess('sync', 'deliverCo', ['p', 'p2']);
         var_dump($result);
-        $result  = Task::deliverByProcess('sync', 'cronTask', ['p1', 'p2']);
+        $result  = Task::deliverByProcess('sync', 'cronTask', ['p1', 'p2'], Task::TYPE_ASYNC);
 
         print_r($result);
 
