@@ -68,7 +68,9 @@ class DemoController
      */
     public function index(Request $request)
     {
+        $result  = Task::deliver('sync', 'cronTask', ['p1', 'p2']);
 
+        print_r($result);
         \Swoft::trigger(TaskEvent::FINISH_TASK, null, 11, 22);
         // 获取所有GET参数
         $get = $request->query();
