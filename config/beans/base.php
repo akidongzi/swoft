@@ -33,10 +33,5 @@ return [
     'demoRedis' => [
         'class' => \Swoft\Redis\Redis::class,
         'poolName' => 'demoRedis'
-    ],
-    'serverDispatcher' => [
-        'middlewares' => [
-            \Swoft\Auth\Middleware\AuthMiddleware::class,
-        ]
-    ],
+    ]
 ];
