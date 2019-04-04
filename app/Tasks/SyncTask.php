@@ -172,6 +172,7 @@ class SyncTask
      */
     public function cronTask()
     {
+        App::error("this errro log");
         echo time() . "每一秒执行一次  \n";
         return 'cron';
     }
