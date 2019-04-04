@@ -37,6 +37,7 @@ class DemoTask
     public function cronTask()
     {
         echo time() . "每一秒执行一次  \n";
+        App::error("this errro log");
         return 'cron';
     }
 
@@ -48,6 +49,7 @@ class DemoTask
     public function cronooTask()
     {
         echo time() . "第3-5秒执行\n";
+        App::error("this errro log");
         return 'cron';
     }
 }
