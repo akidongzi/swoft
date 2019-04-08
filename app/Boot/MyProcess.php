@@ -20,7 +20,7 @@ use Swoft\Task\Task;
 /**
  * Custom process
  *
- * @Process(name="customProcess", coroutine=true , num=1, boot=true)
+ * @Process(name="customProcess", coroutine=false , num=1, boot=false)
  */
 class MyProcess implements ProcessInterface
 {
