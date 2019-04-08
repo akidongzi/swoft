@@ -20,7 +20,7 @@ use Swoft\Task\Task;
 /**
  * Custom process
  *
- * @Process(name="customProcess")
+ * @Process(boot=false)
  */
 class MyProcess implements ProcessInterface
 {
@@ -32,16 +32,11 @@ class MyProcess implements ProcessInterface
 
         echo "Custom boot process \n";
 
+        $result  = Task::deliverByProcess('sync', 'deliverCo', ['p', 'p2']);
+        var_dump($result);
 
-//        $result  = Task::deliverByProcess('sync', 'deliverCo', ['p', 'p2']);
-//        var_dump($result);
-//        $result  = Task::deliverByProcess('demo', 'cronTask', ['p1', 'p2'], 3, 0, Task::TYPE_CO );
-//
-//        print_r($result);
-
-//        ProcessBuilder::create('customProcess')->start();
+        ProcessBuilder::create('customProcess')->start();
     }
-
 
     public function check(): bool
     {

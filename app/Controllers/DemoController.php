@@ -20,8 +20,6 @@ use Swoft\Http\Server\Bean\Annotation\RequestMethod;
 use Swoft\View\Bean\Annotation\View;
 use Swoft\Core\Application;
 use Swoft\Http\Message\Server\Request;
-use Swoft\Task\Event\TaskEvent;
-use Swoft\Task\Task;
 
 /**
  * 控制器demo
@@ -68,11 +66,6 @@ class DemoController
      */
     public function index(Request $request)
     {
-//        $result  = Task::deliver('demo', 'cronTask', ['p1', 'p2'], Task::TYPE_ASYNC);
-//
-//        print_r($result);
-        \Swoft::$server->sendToAll('hi, 大家好啊！');
-        \Swoft::trigger(TaskEvent::FINISH_TASK, null, 11, 22);
         // 获取所有GET参数
         $get = $request->query();
         // 获取name参数默认值defaultName
@@ -86,7 +79,6 @@ class DemoController
         // 获取name参数默认值defaultName
         $inputName = $request->input('name', 'defaultName');
 
-        App::error("this errro log");
         return compact('get', 'getName', 'post', 'postName', 'inputs', 'inputName');
     }
 

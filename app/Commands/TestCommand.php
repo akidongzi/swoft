@@ -85,9 +85,9 @@ class TestCommand
         App::trace('this is command log');
         Log::info('this is comamnd info log');
         /* @var UserLogic $logic */
-//        $logic = App::getBean(UserLogic::class);
-//        $data  = $logic->getUserInfo(['uid1']);
-//        var_dump($hasOpt, $opt, $name, $data);
+        $logic = App::getBean(UserLogic::class);
+        $data  = $logic->getUserInfo(['uid1']);
+        var_dump($hasOpt, $opt, $name, $data);
     }
 
     /**
