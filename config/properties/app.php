@@ -13,12 +13,8 @@ return [
     'version'      => '1.0',
     'autoInitBean' => true,
     'bootScan'     => [
-//        'App\Commands',
-//        'App\Boot',
-    ],
-    'beanScan'     => [
-        'App\Tasks',
-        'App\WebSocket',
+        'App\Commands',
+        'App\Boot',
     ],
     'excludeScan'  => [
         'App\Helper',
@@ -31,10 +27,4 @@ return [
     'service'      => require __DIR__ . DS . 'service.php',
     'breaker'      => require __DIR__ . DS . 'breaker.php',
     'provider'     => require __DIR__ . DS . 'provider.php',
-    'auth' => [
-        'jwt' => [
-            'algorithm' => 'HS256',
-            'secret' => '1231231'
-        ],
-    ],
 ];
