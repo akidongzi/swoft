@@ -14,7 +14,7 @@ return [
     'autoInitBean' => true,
     'bootScan'     => [
         'App\Commands',
-        'App\Boot',
+//        'App\Boot',
     ],
     'beanScan'     => [
         'App\Tasks',
