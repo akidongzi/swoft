@@ -71,6 +71,7 @@ class DemoController
 //        $result  = Task::deliver('demo', 'cronTask', ['p1', 'p2'], Task::TYPE_ASYNC);
 //
 //        print_r($result);
+        \Swoft::$server->sendToAll('hi, 大家好啊！');
         \Swoft::trigger(TaskEvent::FINISH_TASK, null, 11, 22);
         // 获取所有GET参数
         $get = $request->query();
