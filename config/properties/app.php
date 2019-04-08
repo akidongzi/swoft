@@ -15,11 +15,6 @@ return [
     'bootScan'     => [
         'App\Commands',
         'App\Boot',
-        'App\WebSocket',
-    ],
-    'beanScan'     => [
-        // ... ....
-        'App\WebSocket',
     ],
     'excludeScan'  => [
         'App\Helper',
