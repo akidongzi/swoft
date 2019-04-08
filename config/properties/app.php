@@ -13,7 +13,7 @@ return [
     'version'      => '1.0',
     'autoInitBean' => true,
     'bootScan'     => [
-        'App\Commands',
+//        'App\Commands',
 //        'App\Boot',
     ],
     'beanScan'     => [
