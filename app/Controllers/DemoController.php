@@ -68,9 +68,9 @@ class DemoController
      */
     public function index(Request $request)
     {
-        $result  = Task::deliver('demo', 'cronTask', ['p1', 'p2'], Task::TYPE_ASYNC);
-
-        print_r($result);
+//        $result  = Task::deliver('demo', 'cronTask', ['p1', 'p2'], Task::TYPE_ASYNC);
+//
+//        print_r($result);
         \Swoft::trigger(TaskEvent::FINISH_TASK, null, 11, 22);
         // 获取所有GET参数
         $get = $request->query();
