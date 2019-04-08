@@ -17,7 +17,8 @@ return [
         'App\Boot',
     ],
     'beanScan'     => [
-        'App\Tasks'
+        'App\Tasks',
+        'App\WebSocket',
     ],
     'excludeScan'  => [
         'App\Helper',
