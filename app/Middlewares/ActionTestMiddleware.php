@@ -39,7 +39,9 @@ class ActionTestMiddleware implements MiddlewareInterface
      */
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
+        var_dump('ServiceMiddleware->before');
         $response = $handler->handle($request);
+        var_dump('ServiceMiddleware->after');
         return $response->withAddedHeader('Middleware-Action-Test', 'success');
     }
 }
