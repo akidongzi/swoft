@@ -81,7 +81,7 @@ class DemoController
         $inputs = $request->input();
         // 获取name参数默认值defaultName
         $inputName = $request->input('name', 'defaultName');
-
+        App::error("this errro log");
         return compact('get', 'getName', 'post', 'postName', 'inputs', 'inputName');
     }
 
